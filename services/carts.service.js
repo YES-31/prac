@@ -45,6 +45,3 @@ class CartService {
 }
 
 module.exports = CartService;
-
-
-console.log
