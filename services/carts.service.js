@@ -42,6 +42,8 @@ class CartService {
     // console.log('removeCartList in Service: ', removeCartList);
     return deleteItem;
   };
+  findItemInCart = async () => {}
+
 }
 
 module.exports = CartService;
