@@ -45,7 +45,7 @@ class CartService {
   findItemInCart = async () => {}
 
   addItemInCart = async () => {}
-
+  // addItemInCart = async () => {}
 }
 
 module.exports = CartService;
