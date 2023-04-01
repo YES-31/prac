@@ -18,3 +18,21 @@ timerPromise
   .catch((err) => {
     console.log("promise에서 에러 발생 !", err);
   });
+
+// Promise.resolve 함수 인자 사용의 예
+const PPromise = Promise.resolve("hohoho");
+
+PPromise.then((data) => {
+  console.log(data);
+});
+
+//함수를 직접적으로 then에 넘겨서 사용하기 가능
+PPromise.then(console.log);
+
+const plusPromise = Promise.resolve(0);
+function increment(value) {
+  return value + 1;
+}
+
+const result = plusPromise.then(increment).then(increment).then(increment); // +1 +1 +1
+result.then(console.log);
