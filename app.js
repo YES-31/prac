@@ -7,7 +7,7 @@ const sampleRouter = require("./router/sample.js");
 app.use("/sample", [sampleRouter]);
 
 app.get("/", (req, res) => {
-  res.send("hellow world");
+  res.send("서버 실행 확인_");
 });
 
 app.listen(port, () => {
