@@ -13,4 +13,9 @@ jobs:
         env:
           COMMIT_ID: ${{ toJson(github) }}
         run: echo "Commit id ==> $COMMIT_ID"
+
+      - name: "screats test"
+        env:
+          test: ${{ screats.HOST }}
+        run: echo "prac host info  ==> $test"
       
