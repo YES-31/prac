@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: "context"
         env:
-          COMMIT_ID: ${{ toJson(github.sha) }}
+          COMMIT_ID: ${{ toJson(github) }}
         run: echo "Commit id ==> $COMMIT_ID"
       
