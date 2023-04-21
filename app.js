@@ -18,6 +18,7 @@ app.use(
 // router 미들웨어를 사용하겠다 선언
 const sampleRouter = require("./router/sample.js");
 app.use("/sample", [sampleRouter]);
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.send("서버 실행 확인_");
