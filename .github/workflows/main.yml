@@ -2,13 +2,14 @@ name: prac action
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      - name: CD
+        run: CD ~
       - name: Check pwd
-        run : pwd
-      
+        run: pwd
