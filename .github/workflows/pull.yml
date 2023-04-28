@@ -20,7 +20,7 @@ jobs:
         script_stop: true
         script: |
           cd ${{ secrets.PATH }}
-          sudo git pull origin master
-          sudo npm install
-          sudo pm2 kill
-          sudo npm run start
+      #    sudo git pull origin master
+      #    sudo npm install
+      #    sudo pm2 kill
+      #    sudo npm run start
