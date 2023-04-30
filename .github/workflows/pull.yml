@@ -19,6 +19,8 @@ jobs:
         key: ${{ secrets.KEY_MAIN }}
         script_stop: true
         script: |
+          whoami
+          ls -al
           cd ${{ secrets.PATH }}
       #    sudo git pull origin master
       #    sudo npm install
