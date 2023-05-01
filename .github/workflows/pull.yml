@@ -21,7 +21,6 @@ jobs:
         script: |
           cd ${{ secrets.MAIN_PATH }}
           git pull origin main
-          which npm
           npm install
           pm2 kill
           npm run start
