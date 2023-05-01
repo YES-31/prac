@@ -21,7 +21,7 @@ jobs:
         script: |
           cd ${{ secrets.MAIN_PATH }}
           ls -la
-      #    sudo git pull origin main
-      #    sudo npm install
-      #    sudo pm2 kill
-      #    sudo npm run start
+          git pull origin main
+          npm install
+          pm2 kill
+          npm run start
