@@ -14,15 +14,15 @@ jobs:
       # uses: appleboy/ssh-action@d91a1af6f57cd4478ceee14d7705601dafabaa19
       uses: appleboy/ssh-action@v0.1.7
       with:
-        host: ${{ secrets.HOST_MAIN }}
+        host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY_MAIN }}
+        key: ${{ secrets.KEY }}
         script_stop: true
         script: |
           whoami
           ls -al
-          cd ${{ secrets.PATH }}
-      #    sudo git pull origin master
+          cd ${{ secrets.MAIN_PATH }}
+      #    sudo git pull origin main
       #    sudo npm install
       #    sudo pm2 kill
       #    sudo npm run start
