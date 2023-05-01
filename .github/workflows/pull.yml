@@ -20,7 +20,6 @@ jobs:
         script_stop: true
         script: |
           cd ${{ secrets.MAIN_PATH }}
-          ls -la
           git pull origin main
           npm install
           pm2 kill
