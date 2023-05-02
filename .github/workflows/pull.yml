@@ -22,5 +22,6 @@ jobs:
             cd ${{ secrets.MAIN_PATH }}
             git pull origin main
             npm install
+            pm2 list
             pm2 kill
             npm start
