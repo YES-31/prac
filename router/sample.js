@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
 });
 
 const foodTruckRouter = require("./foodTruckRoutes");
-// router.use("/foodTruckInfo", foodTruckRouter);
+router.use("/foodTruckInfo", foodTruckRouter);
 
 router.get("/about", (req, res) => {
   res.send("sample.js about PATH");

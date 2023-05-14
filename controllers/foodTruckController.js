@@ -4,7 +4,9 @@ class foodTruckController {
   getTruck = async (req, res) => {
     try {
       const { truckNumber } = req.params;
-      console.log(truckNumber);
+      res
+        .status(200)
+        .json({ msg: `입력한 foodTruckNumber는 ${truckNumber} 입니다.` });
     } catch (err) {
       console.log(err);
       res
