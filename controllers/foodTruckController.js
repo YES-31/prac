@@ -1,4 +1,5 @@
-// const foodTruckService = require('../services/foodTruckService')
+const FoodTruckService = require("../services/foodTruckService.js");
+const foodTruckService = new FoodTruckService();
 
 class foodTruckController {
   getTruck = async (req, res) => {
