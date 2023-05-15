@@ -10,12 +10,32 @@ const connection = mysql.createConnection({
 connection.connect();
 class foodTruckRepositories {
   getTruck = async (truckId) => {
-    connection.query("SELECT * FROM testb", function (error, results, fields) {
-      if (error) throw error;
-      console.log("The solution is: ", results);
-    });
+    try {
+      //   let answer = connection.query(
+      //     `SELECT * FROM testb where id=${truckId}`,
+      //     function (error, results, fields) {
+      //       if (error) throw error;
+      //       console.log("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP", results);
+      //       return results;
+      //     }
+      //   );
 
-    connection.end();
+      const answer = connection.query(
+        "SELECT * FROM testb",
+        function (error, results, fields) {
+          if (error) throw error;
+          console.log(
+            "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP: ",
+            results
+          );
+        }
+      );
+
+      // connection.end();
+      return answer;
+    } catch (err) {
+      throw err;
+    }
   };
 }
 

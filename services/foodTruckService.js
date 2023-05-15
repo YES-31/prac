@@ -5,8 +5,9 @@ class foodTruckService {
 
   getTruck = async (truckId) => {
     try {
-      const howManyTruck = await this.foodTruckRepositories.getTruck(truckId);
-      return howManyTruck;
+      const result = await this.foodTruckRepositories.getTruck(truckId);
+      console.log("Service asdfasdfasdfasdfasdf", result);
+      return result;
     } catch (err) {
       console.log(err);
       res
