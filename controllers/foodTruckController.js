@@ -4,10 +4,10 @@ const foodTruckService = new FoodTruckService();
 class foodTruckController {
   getTruck = async (req, res) => {
     try {
-      const { truckNumber } = req.params;
-      res
-        .status(200)
-        .json({ msg: `입력한 foodTruckNumber는 ${truckNumber} 입니다.` });
+      const { truckId } = req.params;
+
+      const result = foodTruckService.getTruck(truckId);
+      res.status(200).json({ msg: `입력한 result ${result} 입니다.` });
     } catch (err) {
       console.log(err);
       res

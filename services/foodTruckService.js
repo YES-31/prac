@@ -7,7 +7,6 @@ class foodTruckService {
     try {
       const howManyTruck = await this.foodTruckRepositories.getTruck(truckId);
       return howManyTruck;
-      
     } catch (err) {
       console.log(err);
       res
@@ -16,3 +15,5 @@ class foodTruckService {
     }
   };
 }
+
+module.exports = foodTruckService;

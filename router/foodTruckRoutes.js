@@ -4,6 +4,6 @@ const router = express.Router();
 const FoodTruckController = require("../controllers/foodTruckController");
 const foodTruckController = new FoodTruckController();
 
-router.get("/:truckNumber", foodTruckController.getTruck);
+router.get("/:truckId", foodTruckController.getTruck);
 
 module.exports = router;
