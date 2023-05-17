@@ -21,13 +21,10 @@ class foodTruckRepositories {
       //   );
 
       const answer = connection.query(
-        "SELECT * FROM testb",
+        `SELECT * FROM testb where id = ${truckId}`,
         function (error, results, fields) {
           if (error) throw error;
-          console.log(
-            "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP: ",
-            results
-          );
+          console.log(`${truckId}차량의 정보: `, results);
         }
       );
 
