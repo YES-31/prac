@@ -15,6 +15,18 @@ class foodTruckController {
         .json({ errorMessge: "요청한 데이터의 형식이 올바르지 않습니다." });
     }
   };
+
+  postTruck = async (req, res)=>{
+    try{
+      // arg 추가 필요
+      const result = await foodTruckService.postTurck()
+
+    }catch (err) {
+      console.log(err);
+      res.status(400).json({errorMessge: "postTruck error"})
+    }
+
+  }
 }
 
 module.exports = foodTruckController;
